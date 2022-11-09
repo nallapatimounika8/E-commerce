@@ -10,6 +10,7 @@ export const Cartcard = () => {
 
     function deleteHandler(value) {
         // console.log('hi')
+        console.log('hi this is test')
         dispatch(deleteCartItem(value))
     }
   

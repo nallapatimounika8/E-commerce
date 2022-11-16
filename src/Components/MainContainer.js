@@ -22,11 +22,6 @@ export const MainContainer = () => {
     apiCall();
   }, []);
 
-  function onChangeHandler(search) {
-    const searchValue = items.filter((a) => a.category === search )
-    setItems(searchValue)
-  }
-
   return (
     <div>
       <div style={{ position: "fixed", width: "100%" }}>
@@ -38,15 +33,6 @@ export const MainContainer = () => {
             display: "flex",
           }}
         >
-          <input
-            placeholder="Search...."
-            style={{
-              margin: "5px",
-              width: "30vw",
-              marginLeft: "500px",
-            }}
-            onChange={(e) => onChangeHandler(e.target.value)}
-          />
 
           <button
             class="btn btn-primary"
@@ -54,7 +40,7 @@ export const MainContainer = () => {
             data-bs-toggle="offcanvas"
             data-bs-target="#staticBackdrop"
             aria-controls="staticBackdrop"
-            style={{ backgroundColor: "black", marginLeft: "700px" }}
+            style={{ backgroundColor: "black", marginLeft: "1460px" }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,12 +67,6 @@ export const MainContainer = () => {
       >
         <Modelcart />
         {/* <Cart /> */}
-      </div>
-      <div style={{ margin: "20px 0 20px 500px" }}>
-      <button type="button" class="btn btn-dark" style={{margin:'10px'}} onClick={() => onChangeHandler("men's clothing")}>Men's clothing</button>
-      <button type="button" class="btn btn-dark" style={{margin:'10px'}} onClick={() => onChangeHandler("women's clothing")}>Women's clothing</button>
-      <button type="button" class="btn btn-dark" style={{margin:'10px'}} onClick={() => onChangeHandler("jewelery")}>Jewelery</button>
-      <button type="button" class="btn btn-dark" style={{margin:'10px'}} onClick={() => onChangeHandler("electronics")}>Electronic</button>
       </div>
       <p style={{ margin: "0 0 0 500px" }}>16 product(s) found</p>
       <div
